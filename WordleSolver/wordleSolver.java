@@ -16,7 +16,7 @@ public class wordleSolver {
         List<String> wordleAnswers = new ArrayList<String>();
        
         BufferedReader bf = new BufferedReader(
-            new FileReader("wordle_list.txt"));
+            new FileReader("WordleSolver/wordle_list.txt"));
         String line = bf.readLine();
 
         while (line != null) {
@@ -26,6 +26,8 @@ public class wordleSolver {
         bf.close();
        
         String[] array = wordleAnswers.toArray(new String[0]);
+        
+        ArrayList<String> found = new ArrayList<String>();
 
         for (String str: array) {
             int allMatching = 0;
@@ -35,8 +37,12 @@ public class wordleSolver {
                 }
             }
             if (allMatching == 5) {
-                System.out.println("Match Found: " + str);
+                found.add(str);
             }
+        }
+
+        for (String str: found) {
+            System.out.println("Match Found: " + str);
         }
     }
 }
