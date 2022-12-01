@@ -34,7 +34,7 @@ public class wordleSolver {
             for (int i = 0; i < word.length(); i++) {
                 if (str.charAt(i) == word.charAt(i) || word.charAt(i) == '_') {
                     allMatching += 1;
-                }
+                }`
             }
             if (allMatching == 5) {
                 found.add(str);
