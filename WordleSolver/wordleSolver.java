@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class wordleSolver {
-
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the 5 letter word with _ in place of letters you don't know the location of.");

@@ -5,18 +5,14 @@
 
 public class testing 
 {
-    public static int gcf(int a, int b)
-    {   
-        while (a != 0) {
-            int temp = a;
-            a = b % a;
-            b = temp;
-        }
-        return b;
+    public static boolean closeFar(int numA, int numB, int numC)
+    {
+        return (Math.abs(numB - numA) < 2 && Math.abs(numC - numA) > 2) ||               
+           (Math.abs(numC - numA) < 2 && Math.abs(numB - numA) > 2);
     }
-    
+
     public static void main(String[] args)
     {
-        System.out.println(gcf(24, 12));
+        System.out.println(closeFar(4, 4, 1));
     }
 }
